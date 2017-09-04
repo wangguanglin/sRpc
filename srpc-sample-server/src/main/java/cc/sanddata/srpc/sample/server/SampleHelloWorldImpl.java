@@ -1,5 +1,7 @@
 package cc.sanddata.srpc.sample.server;
 
+import org.springframework.stereotype.Component;
+
 import cc.sanddata.srpc.sample.client.Person;
 import cc.sanddata.srpc.sample.client.SampleHelloworld;
 import cc.sanddata.srpc.server.SRPCService;

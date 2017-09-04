@@ -36,6 +36,7 @@ public class SRPCHandler extends SimpleChannelInboundHandler<SRPCRequest >{
 	 */
 	@Override
 	protected void channelRead0(ChannelHandlerContext ctx, SRPCRequest request) throws Exception {
+		LOGGER.info("start deal request");
 		SRPCResponse response = new SRPCResponse();
 		
 		response.setRequestId(request.getRequestId());

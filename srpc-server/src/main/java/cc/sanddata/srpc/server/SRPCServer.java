@@ -51,7 +51,6 @@ public class SRPCServer implements ApplicationContextAware,InitializingBean{
 	}
 
 	public SRPCServer(String serverAddress, ServiceRegistry registry) {
-		super();
 		this.serverAddress = serverAddress;
 		this.registry = registry;
 	}
