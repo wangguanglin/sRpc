@@ -3,34 +3,34 @@
 /srpc-client/.project
 /srpc-client/.settings
 /srpc-client/.classpath
-/srpc-client/target/
+/srpc-client/target
 
 /srpc-comm/.project
 /srpc-comm/.settings
 /srpc-comm/.classpath
-/srpc-comm/target/
+/srpc-comm/target
 
 /srpc-registry/.project
 /srpc-registry/.settings
 /srpc-registry/.classpath
-/srpc-registry/target/
+/srpc-registry/target
 
 /srpc-sample-app/.project
 /srpc-sample-app/.settings
 /srpc-sample-app/.classpath
-/srpc-sample-app/target/
+/srpc-sample-app/target
 
 /srpc-sample-client/.project
 /srpc-sample-client/.settings
 /srpc-sample-client/.classpath
-/srpc-sample-client/target/
+/srpc-sample-client/target
 
 /srpc-sample-server/.project
 /srpc-sample-server/.settings
 /srpc-sample-server/.classpath
-/srpc-sample-server/target/
+/srpc-sample-server/target
 
 /srpc-server/.project
 /srpc-server/.settings
 /srpc-server/.classpath
-/srpc-server/target/
+/srpc-server/target
