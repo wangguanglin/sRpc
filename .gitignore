@@ -1,37 +1,17 @@
-# maven ignore
-target/
 *.class
+
+# Package Files #
 *.jar
 *.war
-*.zip
-*.tar
-*.tar.gz
+*.ear
 
-# maven plugin ignore
-release.properties
-cobertura.ser
-*.gpg
-
-# eclipse ignore
-.settings/
-.project
+# Eclipse artifacts
+.settings
 .classpath
+.project
 
-# idea ignore
-.idea/
-*.ipr
-*.iml
-*.iws
-
-# temp ignore
-logs/
-*.log
-*.doc
-*.cache
-*.diff
-*.patch
-*.tmp
-
-# system ignore
+bin/
+target/
 .DS_Store
-Thumbs.db
+/srpc-server/target
+/*/target

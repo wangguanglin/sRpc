@@ -1,7 +1,7 @@
 package cc.sanddata.srpc.sample.server;
 
-import cc.sanddata.srpc.sample.client.Person;
-import cc.sanddata.srpc.sample.client.SampleHelloworld;
+import cc.sanddata.sample.app.Person;
+import cc.sanddata.sample.app.SampleHelloworld;
 import cc.sanddata.srpc.server.SRPCService;
 
 @SRPCService(SampleHelloworld.class)

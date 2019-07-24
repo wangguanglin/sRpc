@@ -18,6 +18,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * 
  * @ClassName: SRPCClient 
@@ -29,7 +31,9 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 public class SRPCClient extends SimpleChannelInboundHandler<SRPCResponse> {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(SRPCClient.class);
-	
+
+	private static ConcurrentHashMap<String,Bootstrap> clientMap = new ConcurrentHashMap();
+
 	private String ip;
 	
 	private int port;
@@ -71,22 +75,31 @@ public class SRPCClient extends SimpleChannelInboundHandler<SRPCResponse> {
 	 * @throws
 	 */
 	public SRPCResponse send(SRPCRequest request) throws Exception{
-		EventLoopGroup group = new NioEventLoopGroup();
-		try {
-			Bootstrap bootstrap = new Bootstrap();
+		String clientKey = ip+port;
+		Bootstrap bootstrap = null;
+		if(false){
+			LOGGER.debug("from cache get bootstrap");
+			bootstrap = clientMap.get(clientKey);
+		}else{
+			EventLoopGroup group = new NioEventLoopGroup();
+			bootstrap = new Bootstrap();
 			bootstrap.group(group).channel(NioSocketChannel.class)
-				.handler(new ChannelInitializer<SocketChannel>() {
-					/**
-					 * 向pipeline中添加编码、解码、业务处理的handler
-					 */
-					@Override
-					protected void initChannel(SocketChannel channel) throws Exception {
-						channel.pipeline().addLast(new SRPCEncoder(SRPCRequest.class))
-							.addLast(new SRPCDecoder(SRPCResponse.class))
-							.addLast(SRPCClient.this);
-						
-					}
-				}).option(ChannelOption.SO_KEEPALIVE, true);
+					.handler(new ChannelInitializer<SocketChannel>() {
+						/**
+						 * 向pipeline中添加编码、解码、业务处理的handler
+						 */
+						@Override
+						protected void initChannel(SocketChannel channel) throws Exception {
+							channel.pipeline().addLast(new SRPCEncoder(SRPCRequest.class))
+									.addLast(new SRPCDecoder(SRPCResponse.class))
+									.addLast(SRPCClient.this);
+
+						}
+					}).option(ChannelOption.SO_KEEPALIVE, true);
+			//clientMap.put(clientKey,bootstrap);
+		}
+		try {
+
 			//链接服务器
 			ChannelFuture future = bootstrap.connect(ip, port).sync();
 			
@@ -104,7 +117,7 @@ public class SRPCClient extends SimpleChannelInboundHandler<SRPCResponse> {
 			}
 			return response;
 		} catch (Exception e) {
-			group.shutdownGracefully();
+			//group.shutdownGracefully();
 		}
 		
 		

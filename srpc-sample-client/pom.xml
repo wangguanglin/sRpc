@@ -22,5 +22,16 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>cc.sanddata</groupId>
+      <artifactId>srpc-client</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <!-- RPC Sample app -->
+    <dependency>
+      <groupId>cc.sanddata</groupId>
+      <artifactId>srpc-sample-app</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>

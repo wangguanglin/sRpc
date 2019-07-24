@@ -32,6 +32,12 @@ public class SRPCProxy {
 		super();
 		this.serviceDiscovery = serviceDiscovery;
 	}
+
+	public SRPCProxy(String serverAddress, ServiceDiscovery serviceDiscovery) {
+		this.serverAddress = serverAddress;
+		this.serviceDiscovery = serviceDiscovery;
+	}
+
 	/**
 	 * 
 	 * @Title: create 

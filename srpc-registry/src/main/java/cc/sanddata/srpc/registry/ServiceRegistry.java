@@ -41,7 +41,7 @@ public class ServiceRegistry {
 //				zk.create(Constand.ZK_DATA_PATH, null, Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 //			}
 //			String serverPath = Constand.ZK_DATA_PATH+"/server-";
-			String path = zk.create(Constand.ZK_DATA_PATH, bytes, Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
+			String path = zk.create(Constand.ZK_DATA_PATH, bytes, Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 			
 			LOGGER.debug("create zookeeper node (() => {})",path,data);
 		} catch (Exception e) {
