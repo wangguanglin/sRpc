@@ -1,7 +1,11 @@
-package cc.sanddata.srpc.sample.client;
+package cc.sanddata.sample.app;
 
 public class Person {
 	private String name;
+
+	public Person(String name) {
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;

@@ -1,4 +1,4 @@
-package cc.sanddata.srpc.sample.client;
+package cc.sanddata.sample.app;
 
 public interface SampleHelloworld {
 	String hello(String name);
