@@ -15,3 +15,7 @@ target/
 .DS_Store
 /srpc-server/target
 /*/target
+/srpc-sample-client/target
+/srpc-sample-app/target
+/srpc-registry/target
+/srpc-comm/target
