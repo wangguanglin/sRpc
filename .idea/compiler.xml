@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="srpc-client" />
+        <module name="srpc-comm" />
+        <module name="srpc-registry" />
+        <module name="srpc-sample-app" />
+        <module name="srpc-sample-client" />
+        <module name="srpc-sample-server" />
+        <module name="srpc-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="srpc" target="1.5" />
+      <module name="srpc-client" target="1.8" />
+      <module name="srpc-comm" target="1.8" />
+      <module name="srpc-registry" target="1.8" />
+      <module name="srpc-sample-app" target="1.8" />
+      <module name="srpc-sample-client" target="1.8" />
+      <module name="srpc-sample-server" target="1.8" />
+      <module name="srpc-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

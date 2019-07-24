@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/srpc.iml" filepath="$PROJECT_DIR$/srpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpc-client/srpc-client.iml" filepath="$PROJECT_DIR$/srpc-client/srpc-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpc-comm/srpc-comm.iml" filepath="$PROJECT_DIR$/srpc-comm/srpc-comm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpc-registry/srpc-registry.iml" filepath="$PROJECT_DIR$/srpc-registry/srpc-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpc-sample-app/srpc-sample-app.iml" filepath="$PROJECT_DIR$/srpc-sample-app/srpc-sample-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpc-sample-client/srpc-sample-client.iml" filepath="$PROJECT_DIR$/srpc-sample-client/srpc-sample-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpc-sample-server/srpc-sample-server.iml" filepath="$PROJECT_DIR$/srpc-sample-server/srpc-sample-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/srpc-server/srpc-server.iml" filepath="$PROJECT_DIR$/srpc-server/srpc-server.iml" />
+    </modules>
+  </component>
+</project>
